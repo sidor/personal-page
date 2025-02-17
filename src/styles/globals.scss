@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: var(--pal-brown);
+    --secondary: var(--pal-red);
+
+    --pal-black: #141414;
+    --pal-red: #b0323a;
+    --pal-white: #f0d8c3;
+    --pal-brown: #c87c0c;
+    --pal-green: #2b3537;
+    --pal-blue: #8aa8ab;
+
+    --pal-darkblue: #0c2233;
+    --pal-peru: #bc883d;
+}
+
+/* @media (prefers-color-scheme: dark) {
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
+} */
+
+body {
+    color: var(--pal-white);
+    background: var(--pal-darkblue);
+    border-bottom: 2px solid var(--pal-white);
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
+        Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    font-weight: 300;
+}
+
+input {
+    @apply border;
+}
+
+h1 {
+    font-family: var(--font-bitter);
+    font-weight: 700;
+    @apply text-4xl;
+}
+h3 {
+    @apply text-lg font-medium mt-4 mb-2;
+}
+th {
+    @apply text-left;
+}
+th,
+td {
+    @apply border p-1;
+}
+p {
+    @apply my-2;
+}
+a {
+    @apply text-primary;
+}
+
+.bitter {
+    font-family: var(--font-bitter);
+}
+
+.city {
+    background-image: url("/svg/vienna.svg");
+    background-size: contain;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    height: 150px;
+}
