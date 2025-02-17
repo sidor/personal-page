@@ -12,6 +12,15 @@ export default {
                 background: "var(--background)",
                 foreground: "var(--foreground)",
                 primary: "var(--primary)",
+
+                "pal-red": "var(--pal-red)",
+                "pal-white": "var(--pal-white)",
+                "pal-brown": "var(--pal-brown)",
+                "pal-green": "var(--pal-green)",
+                "pal-blue": "var(--pal-blue)",
+
+                "pal-darkblue": "var(--pal-darkblue)",
+                "pal-peru": "var(--pal-peru)",
             },
         },
         container: {
