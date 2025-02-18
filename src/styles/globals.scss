@@ -76,63 +76,12 @@ section {
 }
 
 .city {
-    background-image: url("/svg/vienna.svg");
+    background-image: url("/svg/vienna-w-anim.svg");
     background-size: contain;
     background-position: bottom right;
     background-repeat: no-repeat;
-    max-height: 120px;
-    max-width: 460px;
-    aspect-ratio: 460 / 120;
+    height: 120px;
     opacity: 0.32;
-    // background-color: red;
     width: 100%;
-    @apply text-white opacity-50 mt-auto  relative;
-}
-.wheel {
-    background-image: url("/svg/wheel.svg");
-    background-size: contain;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-
-    animation: rotateWheel 20s infinite;
-    @apply absolute;
-
-    // height: 74px;
-    // width: 74px;
-    // right: 352px;
-    // top: 32px;
-
-    height: 60%;
-    width: 15.655%;
-    left: 7.7%;
-    top: 27%;
-}
-@keyframes rotateWheel {
-    0% {
-        transform: rotate(0deg);
-    }
-    10% {
-        transform: rotate(45deg);
-    } /* 1/8 rotation */
-    25% {
-        transform: rotate(90deg);
-    }
-    35% {
-        transform: rotate(135deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    60% {
-        transform: rotate(225deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-    85% {
-        transform: rotate(315deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+    @apply text-white opacity-50 mt-auto -mb-0.5;
 }

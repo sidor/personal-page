@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
+import { EXPERIENCE } from "@/data/experience";
 
 export default function Home() {
     return (
@@ -9,10 +10,9 @@ export default function Home() {
                 <div className="flex justify-between gap-12 pt-14">
                     <header className="">
                         <h1 className="text-pal-brown">Jakub Sidorowicz</h1>
-
-                        <p className="bitter font-medium text-xl text-whote mt-2">
+                        <h2 className="bitter font-medium text-xl text-whote mt-2">
                             Software Engineer
-                        </p>
+                        </h2>
                         <div className="flex flex-row gap-4 mt-12 text-pal-blue text-xl">
                             <FaLinkedin />
                             <FaGithub />
@@ -50,15 +50,32 @@ export default function Home() {
                         </section>
                         <section>
                             <h3>Experience</h3>
+                            <ol>
+                                {EXPERIENCE.map((exp, index) => (
+                                    <li key={index} className="mb-6">
+                                        <h4 className="font-semibold">
+                                            {exp.company}
+                                        </h4>
+                                        <div className="text-pal-blue text-sm">
+                                            {exp.role}
+                                        </div>
+                                        <div>{exp.duration}</div>
+                                        <div className="mt-2">
+                                            {exp.description}
+                                        </div>
+                                    </li>
+                                ))}
+                            </ol>
+                            <Link href="/experience">
+                                View all experience &raquo;
+                            </Link>
                         </section>
                     </div>
                 </div>
             </div>
             <div className="mt-auto flex justify-center items-end overflow-hidden">
                 <div className="w-1/2 flex items-end justify-end">
-                    <div className="city">
-                        <span className="wheel" />
-                    </div>
+                    <div className="city"></div>
                 </div>
                 <div className="w-1/2 text-pal-white text-sm pl-7 pb-4 opacity-70">
                     <div className="max-w-md">
@@ -81,7 +98,16 @@ export default function Home() {
                             Tailwind CSS
                         </a>{" "}
                         and Sass. Deployed on Vercel. Feel free to check the
-                        public repository on Github.
+                        public{" "}
+                        <a
+                            href="https://github.com/sidor/personal"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="Repository of this page (new tab)"
+                        >
+                            repository
+                        </a>{" "}
+                        on Github.
                     </div>
                 </div>
             </div>

@@ -19,11 +19,13 @@
         begin="0s"
         dur="20s"
         type="rotate"
-        from="0 797.17 770.88"
-        to="360 797.17 770.88"
+        from="0 797.1 770.96"
+        to="360 797.1 770.96"
         repeatCount="indefinite"
     />
 </path>
+
+<circle cx="797.1" cy="770.96" r="10" stroke="none" fill="red"/>
 
 </svg>
 
