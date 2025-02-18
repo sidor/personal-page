@@ -14,6 +14,7 @@
     --pal-blue: #8aa8ab;
 
     --pal-darkblue: #0c2233;
+    // --pal-darkblue: #0a1e2d;
     --pal-peru: #bc883d;
 }
 
@@ -25,9 +26,8 @@
 } */
 
 body {
-    color: var(--pal-white);
+    color: #e6e8ea;
     background: var(--pal-darkblue);
-    border-bottom: 2px solid var(--pal-white);
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica,
         Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
     font-weight: 300;
@@ -43,7 +43,9 @@ h1 {
     @apply text-4xl;
 }
 h3 {
-    @apply text-lg font-medium mt-4 mb-2;
+    font-family: var(--font-bitter);
+    font-weight: 600;
+    @apply text-2xl mt-3 mb-6 font-medium text-pal-blue;
 }
 th {
     @apply text-left;
@@ -53,20 +55,84 @@ td {
     @apply border p-1;
 }
 p {
-    @apply my-2;
+    @apply my-3;
 }
 a {
-    @apply text-primary;
+    @apply text-pal-brown font-semibold;
+}
+section {
+    @apply mb-20;
 }
 
 .bitter {
     font-family: var(--font-bitter);
 }
+.font-homemade-apple {
+    font-family: var(--font-homemade-apple);
+}
+
+.container {
+    @apply mx-auto px-4 max-w-7xl;
+}
 
 .city {
     background-image: url("/svg/vienna.svg");
     background-size: contain;
-    background-position: bottom center;
+    background-position: bottom right;
     background-repeat: no-repeat;
-    height: 150px;
+    max-height: 120px;
+    max-width: 460px;
+    aspect-ratio: 460 / 120;
+    opacity: 0.32;
+    // background-color: red;
+    width: 100%;
+    @apply text-white opacity-50 mt-auto  relative;
+}
+.wheel {
+    background-image: url("/svg/wheel.svg");
+    background-size: contain;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+
+    animation: rotateWheel 20s infinite;
+    @apply absolute;
+
+    // height: 74px;
+    // width: 74px;
+    // right: 352px;
+    // top: 32px;
+
+    height: 60%;
+    width: 15.655%;
+    left: 7.7%;
+    top: 27%;
+}
+@keyframes rotateWheel {
+    0% {
+        transform: rotate(0deg);
+    }
+    10% {
+        transform: rotate(45deg);
+    } /* 1/8 rotation */
+    25% {
+        transform: rotate(90deg);
+    }
+    35% {
+        transform: rotate(135deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    60% {
+        transform: rotate(225deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    85% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

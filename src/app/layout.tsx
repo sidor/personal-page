@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Bitter } from "next/font/google";
+import { Bitter, Homemade_Apple } from "next/font/google";
 import "@/styles/globals.scss";
 
 const bitter = Bitter({
     variable: "--font-bitter",
     subsets: ["latin"],
     display: "swap",
+    weight: ["500", "600", "700"],
+});
+
+const homemadeApple = Homemade_Apple({
+    variable: "--font-homemade-apple",
+    subsets: ["latin"],
+    weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +27,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body className={`${bitter.variable} antialiased`}>{children}</body>
+            <body
+                className={`${bitter.variable} ${homemadeApple.variable} antialiased`}
+            >
+                {children}
+            </body>
         </html>
     );
 }
