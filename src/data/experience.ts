@@ -32,6 +32,7 @@ export const SKILLS = {
         vercel: "Vercel",
         github: "GitHub",
         bitbucket: "Bitbucket",
+        stripe: "Stripe",
     },
     methodologies: {
         agile: "Agile",
@@ -43,7 +44,6 @@ export const SKILLS = {
 export const EXPERIENCE = [
     {
         company: "Self-Employed",
-        role: "Gun for hire",
         duration: "2023 - Present",
         description:
             "Supporting start-ups by creating great web applications. Key projects — Kavo, Sneakit.",
@@ -80,6 +80,7 @@ export const EXPERIENCE = [
             SKILLS.frontend.next,
             SKILLS.frontend.styledComponents,
             SKILLS.frontend.storyBook,
+            SKILLS.tools.stripe,
             SKILLS.backend.mongo,
             SKILLS.backend.node,
         ],
