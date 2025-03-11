@@ -24,7 +24,7 @@ export default function Home() {
                             <h3>About me</h3>
                             <div className="leading-7">
                                 <p>
-                                    I&apos;mm a passionate and results-driven
+                                    I&apos;m a passionate and results-driven
                                     developer, living in Vienna, Austria. I
                                     began my{" "}
                                     <Link href="/experience">career</Link> in
