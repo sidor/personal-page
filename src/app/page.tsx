@@ -115,9 +115,9 @@ export default function Home() {
                                 </li>
                             ))}
                         </ol>
-                        <Link href="/experience">
+                        {/*<Link href="/experience">
                             View all experience &raquo;
-                        </Link>
+                        </Link>*/}
                     </section>
                 </main>
             </div>
@@ -143,8 +143,18 @@ export default function Home() {
                         >
                             {SKILLS.frontend.tailwind}
                         </a>{" "}
-                        and {SKILLS.frontend.sass}. Deployed on{" "}
-                        {SKILLS.tools.vercel}. Feel free to use the public{" "}
+                        and{" "}
+                        <a
+                            href="https://sass-lang.com/"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="Sass CSS extension (new tab)"
+                        >
+                            {SKILLS.frontend.sass}
+                        </a>
+                        . Deployed on {SKILLS.tools.vercel}.
+                        {/*Feel free to use
+                        the public{" "}
                         <a
                             href="https://github.com/sidor/personal"
                             target="_blank"
@@ -153,7 +163,7 @@ export default function Home() {
                         >
                             repository
                         </a>{" "}
-                        on Github.
+                        on Github.*/}
                     </div>
                 </main>
                 <div className="side relative">
