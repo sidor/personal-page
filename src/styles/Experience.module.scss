@@ -1,0 +1,26 @@
+.timeline {
+    @apply border-pal-green border-l pl-6 relative ml-1;
+
+    &:before,
+    &:after {
+        content: "";
+        @apply w-px h-5 bg-gradient-to-t absolute -left-px;
+    }
+    &:before {
+        @apply top-0 from-pal-green to-pal-darkblue;
+    }
+    &:after {
+        @apply bottom-0 from-pal-darkblue to-pal-green;
+    }
+    &__duration {
+        $durationColor: var(--pal-turquoise);
+        color: $durationColor;
+        text-shadow: 2px 2px 50px $durationColor;
+        @apply relative;
+
+        &:before {
+            content: "";
+            @apply w-2.5 h-2.5 border border-pal-green rounded-full bg-pal-darkblue absolute -left-7 -ml-px top-1 mt-0.5;
+        }
+    }
+}
