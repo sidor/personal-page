@@ -14,36 +14,37 @@ export default function Home() {
                             title="Go to homepage"
                             aria-label="Go to homepage"
                         >
-                            Jakub Sidorowicz
+                            {process.env.NEXT_PUBLIC_NAME}
                         </Link>
                     </h1>
                     <h2 className="bitter font-medium text-xl text-whote mt-2">
                         Software Engineer
                     </h2>
                     <div className="media flex flex-row gap-4 mt-6 md:mt-12 text-xl">
-                        <a
-                            href="https://www.linkedin.com/in/sidorowicz/"
+                        {process.env.NEXT_PUBLIC_LINKEDIN_PROFILE && <a
+                            href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}
                             target="_blank"
                             rel="noreferrer noopener"
                             aria-label="Opens linkedin profile (new tab)"
                         >
                             <FaLinkedin />
-                        </a>
-                        <a
-                            href="https://github.com/sidor/"
+                        </a>}
+                        {process.env.NEXT_PUBLIC_GITHUB_PROFILE && <a
+                            href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}
                             target="_blank"
                             rel="noreferrer noopener"
                             aria-label="Opens github user profile (new tab)"
                         >
                             <FaGithub />
-                        </a>
-                        <a
-                            href="mailto:jakub@sidorowi.cz"
+                        </a>}
+                        {process.env.NEXT_PUBLIC_EMAIL && <a
+                            href={`mailto:${
+                                process.env.NEXT_PUBLIC_EMAIL}`}
                             rel="noreferrer noopener"
                             aria-label="Opens your email client"
                         >
                             <FaEnvelope />
-                        </a>
+                        </a>}
                     </div>
                 </header>
                 <main className="main">
@@ -121,7 +122,7 @@ export default function Home() {
                             {SKILLS.frontend.sass}
                         </a>
                         . Deployed on {SKILLS.tools.vercel}.
-                        {/*Feel free to use
+                        Feel free to use
                         the public{" "}
                         <a
                             href="https://github.com/sidor/personal"
@@ -131,7 +132,7 @@ export default function Home() {
                         >
                             repository
                         </a>{" "}
-                        on Github.*/}
+                        on Github.
                     </div>
                 </main>
                 <div className="side relative">
