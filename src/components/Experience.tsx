@@ -1,6 +1,5 @@
 import { EXPERIENCE } from "@/data/experience";
 import styles from "@/styles/Experience.module.scss";
-import Link from "next/link";
 
 export default function Experience() {
     return (
@@ -34,9 +33,9 @@ export default function Experience() {
                     </li>
                 ))}
             </ol>
-            <Link href="/experience">
+            {/* <Link href="/experience">
                 View all experience &raquo;
-            </Link>
+            </Link> */}
         </section>
     );
 }

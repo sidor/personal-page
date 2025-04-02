@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Bitter, Homemade_Apple } from "next/font/google";
 import "@/styles/globals.scss";
+import Footer from "@/components/Footer";
 
 const bitter = Bitter({
     variable: "--font-bitter",
@@ -28,9 +29,10 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${bitter.variable} ${homemadeApple.variable} antialiased`}
+                className={`${bitter.variable} ${homemadeApple.variable} antialiased flex flex-col min-h-screen`}
             >
-                {children}
+                <main className="flex-grow">{children}</main>
+                <Footer />
             </body>
         </html>
     );
