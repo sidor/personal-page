@@ -33,9 +33,9 @@ export default function Experience() {
                     </li>
                 ))}
             </ol>
-            {/*<Link href="/experience">
+            {/* <Link href="/experience">
                 View all experience &raquo;
-            </Link>*/}
+            </Link> */}
         </section>
     );
 }

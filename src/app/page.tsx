@@ -14,36 +14,42 @@ export default function Home() {
                             title="Go to homepage"
                             aria-label="Go to homepage"
                         >
-                            Jakub Sidorowicz
+                            {process.env.NEXT_PUBLIC_NAME}
                         </Link>
                     </h1>
                     <h2 className="bitter font-medium text-xl text-whote mt-2">
                         Software Engineer
                     </h2>
                     <div className="media flex flex-row gap-4 mt-6 md:mt-12 text-xl">
-                        <a
-                            href="https://www.linkedin.com/in/sidorowicz/"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Opens linkedin profile (new tab)"
-                        >
-                            <FaLinkedin />
-                        </a>
-                        <a
-                            href="https://github.com/sidor/"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Opens github user profile (new tab)"
-                        >
-                            <FaGithub />
-                        </a>
-                        <a
-                            href="mailto:jakub@sidorowi.cz"
-                            rel="noreferrer noopener"
-                            aria-label="Opens your email client"
-                        >
-                            <FaEnvelope />
-                        </a>
+                        {process.env.NEXT_PUBLIC_LINKEDIN_PROFILE && (
+                            <a
+                                href={process.env.NEXT_PUBLIC_LINKEDIN_PROFILE}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                aria-label="Opens linkedin profile (new tab)"
+                            >
+                                <FaLinkedin />
+                            </a>
+                        )}
+                        {process.env.NEXT_PUBLIC_GITHUB_PROFILE && (
+                            <a
+                                href={process.env.NEXT_PUBLIC_GITHUB_PROFILE}
+                                target="_blank"
+                                rel="noreferrer noopener"
+                                aria-label="Opens github user profile (new tab)"
+                            >
+                                <FaGithub />
+                            </a>
+                        )}
+                        {process.env.NEXT_PUBLIC_EMAIL && (
+                            <a
+                                href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+                                rel="noreferrer noopener"
+                                aria-label="Opens your email client"
+                            >
+                                <FaEnvelope />
+                            </a>
+                        )}
                     </div>
                 </header>
                 <main className="main">
@@ -88,57 +94,6 @@ export default function Home() {
                     </section>
                     <Experience />
                 </main>
-            </div>
-
-            <div className="container container--footer md:flex-row-reverse md:gap-24 mt-auto">
-                <main className="main">
-                    <div className="md:max-w-md opacity-60 text-sm pb-2 xl:pb-3 leading-5">
-                        Made with love in Vienna using{" "}
-                        <a
-                            href="https://nextjs.org/"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Next.js (new tab)"
-                        >
-                            {SKILLS.frontend.next}
-                        </a>
-                        ,{" "}
-                        <a
-                            href="https://tailwindcss.com/"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Tailwind CSS (new tab)"
-                        >
-                            {SKILLS.frontend.tailwind}
-                        </a>{" "}
-                        and{" "}
-                        <a
-                            href="https://sass-lang.com/"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Sass CSS extension (new tab)"
-                        >
-                            {SKILLS.frontend.sass}
-                        </a>
-                        . Deployed on {SKILLS.tools.vercel}.
-                        {/*Feel free to use
-                        the public{" "}
-                        <a
-                            href="https://github.com/sidor/personal"
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Repository of this page (new tab)"
-                        >
-                            repository
-                        </a>{" "}
-                        on Github.*/}
-                    </div>
-                </main>
-                <div className="side relative">
-                    <div className="overflow-hidden w-full">
-                        <div className="city"></div>
-                    </div>
-                </div>
             </div>
         </div>
     );
