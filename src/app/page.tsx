@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
-import { SKILLS } from "@/data/experience";
+import SKILLS from "@/data/skills";
 import Experience from "@/components/Experience";
 
 export default function Home() {

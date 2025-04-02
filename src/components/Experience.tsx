@@ -1,4 +1,4 @@
-import { EXPERIENCE } from "@/data/experience";
+import EXPERIENCE from "@/data/experience";
 import styles from "@/styles/Experience.module.scss";
 
 export default function Experience() {

@@ -1,52 +1,11 @@
-export const SKILLS = {
-    frontend: {
-        javascript: "JavaScript",
-        typescript: "TypeScript",
-        react: "React",
-        vue: "Vue.js",
-        next: "Next.js",
-        gatsby: "Gatsby",
-        tailwind: "Tailwind CSS",
-        sass: "Sass",
-        styledComponents: "Styled Components",
-        seo: "SEO Optimization",
-        storyBook: "Storybook",
-    },
-    backend: {
-        node: "Node.js",
-        laravel: "Laravel",
-        php: "PHP",
-        graphql: "GraphQL",
-        mongo: "MongoDB",
-        mysql: "MySQL",
-    },
-    testing: {
-        jest: "Jest",
-        mocha: "Mocha",
-        karma: "Karma",
-    },
-    tools: {
-        jira: "Jira",
-        figma: "Figma",
-        firebase: "Firebase",
-        vercel: "Vercel",
-        github: "GitHub",
-        bitbucket: "Bitbucket",
-        stripe: "Stripe",
-    },
-    methodologies: {
-        agile: "Agile",
-        kanban: "Kanban",
-        scrum: "Scrum",
-    },
-};
+import SKILLS from "./skills";
 
-export const EXPERIENCE = [
+const EXPERIENCE = [
     {
         company: "Self-Employed",
         duration: "2023 - Present",
         description:
-            "Supporting start-ups by creating great web applications. Key projects — Kavo, Sneakit.",
+            "Supporting start-ups by creating great web applications. Key projects: Sneakit — marketplace for buying and reselling limited edition sneakers using Laravel and Vue, Kavo — React application to manage large shop orders from a Discord channel, utilizing AI to manage data inputs and match buyers and sellers",
         skills: [
             SKILLS.frontend.react,
             SKILLS.frontend.vue,
@@ -86,3 +45,5 @@ export const EXPERIENCE = [
         ],
     },
 ];
+
+export default EXPERIENCE;
